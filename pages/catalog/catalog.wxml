@@ -1,0 +1,70 @@
+<!--pages/catalog/catalog.wxml-->
+<!-- <sroll-view class='windows' scroll-y="true"  style="height:{{WH}}rpx"> -->
+
+  <view class='menu'>
+    <template is="item" data="{{...basic}}" />
+    <view class='sub_item' wx:if="{{yn_basic}}">
+      <block wx:for="{{sub_basic}}">
+        <template is="sub_text" data="{{...item}}" />
+      </block>
+    </view>
+
+    <template is="item" data="{{...love}}" />
+    <view class='sub_item' wx:if="{{yn_love}}">
+      <block wx:for="{{sub_love}}">
+        <template is="sub_text" data="{{...item}}" />
+      </block>
+    </view>
+
+
+    <template is="item" data="{{...choice}}" />
+    <view class='sub_item' wx:if="{{yn_choice}}">
+      <block wx:for="{{sub_choice}}">
+        <template is="sub_text" data="{{...item}}" />
+      </block>
+    </view>
+
+    <template is="item" data="{{...question}}" />
+    <view class='sub_item' wx:if="{{yn_question}}">
+      <block wx:for="{{sub_question}}">
+        <template is="sub_text" data="{{...item}}" />
+      </block>
+    </view>
+  </view>
+
+<!-- </sroll-view> -->
+
+<!--背景图-->
+<view class="bg" style='background-image:' />
+
+
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <!-- <view class="modal-title">万一</view> -->
+  <view class="modal-img">
+    <image src='{{modalImg}}'></image>
+  </view>
+  <view class="modal-text">
+    <text>{{modalText}}</text>
+  </view>
+  <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">开始占卜</view>
+</view>
+
+
+
+<!--模版-->
+<template name="item">
+  <view class="item" bindtap='{{item_tap}}'>
+    <!-- <view class='item_o'> -->
+    <image class="img" src='{{item_img}}'></image>
+    <view class="text">{{item_text}}</view>
+  </view>
+  <!-- </view> -->
+</template>
+
+<template name="sub_text">
+  <view class='sub_text' data-tapcontent='{{sub_item_title}}' bindtap='item_tap'>{{sub_item_text}}</view>
+</template>

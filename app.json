@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/catalog/catalog",
+    "pages/process/process",
+    "pages/test/test",
+    "pages/setting/setting",
+    "pages/main/main",
+    "pages/divine/divine",
+    "pages/result/result"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0b1018",
+    "navigationBarTitleText": "Tarot",
+    "navigationBarTextStyle": "white"
+  }
+}

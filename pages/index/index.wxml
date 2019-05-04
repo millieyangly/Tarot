@@ -1,0 +1,15 @@
+<!--index.wxml-->
+
+
+
+  <view class='index1'>
+    <image class="title" src='../../pic/index_title.png'></image>
+    <image class="img" src='../../pic/index_main1.png'></image>
+    <image bindtap='tap_arrow' class="arrow" src='../../pic/index_arrow.png'></image>
+  </view>
+  <view class="index2">
+    <image bindtap='tap_eye' class="eye" src='../../pic/index_eye1.png'></image>
+  </view>
+
+
+<view class="bg" />

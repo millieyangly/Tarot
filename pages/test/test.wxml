@@ -1,0 +1,11 @@
+<view class="animation-element-wrapper">
+
+  <image wx:for="{{card}}" wx:key="{{cardid}}" animation='{{item.name}}' class="card-element" src='{{item.bg}}' data-cardid='{{cardid}}' id='{{item.id}}' bindtap="testbutton" />
+
+</view>
+
+
+
+
+
+<button class="animation-button" bindtap="washstart">开始洗牌</button>

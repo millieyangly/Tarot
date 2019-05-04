@@ -1,0 +1,62 @@
+<!--pages/setting/setting.wxml-->
+
+
+<!--template is="setting_item" data="{{...item}}"  style="height: {{WHC}}rpx;"/-->
+<view class="bg" />
+<scroll-view scroll-y="true" style="height: {{WHC}}rpx;">
+  <view class='setting_content'>
+    <template is="setting_item1" data="{{...pokernum}}" />
+    <template is="setting_item" data="{{...cutmethod}}" />
+    <template is="setting_item" data="{{...washdirection}}" />
+    <template is="setting_item" data="{{...drawmethod}}" />
+  </view>
+</scroll-view>
+
+<view class="btn-area" bindtap="bindButtonOk">
+  <view class="btn">
+    <view class="btn-text">确 定</view>
+  </view>
+
+</view>
+
+
+
+<template name="setting_item">
+  <view class="setting_item">
+    <view class="item_title">{{title}}</view>
+    <view class="radio_group">
+      <view class="radio0" bindtap='{{bind0}}'>
+        <view class="radio_img" data-current="0">
+          <image wx:if="{{radio}}" src="../../pic/set_circle_64.svg" />
+          <image wx:else src="../../pic/set_radio_16.png" />
+        </view>
+        <view>{{text0}}</view>
+      </view>
+      <view class="radio1" bindtap='{{bind1}}'>
+        <image class="radio_img" wx:if="{{radio}}" src="../../pic/set_radio_16.png" />
+        <image class="radio_img" wx:else src="../../pic/set_circle_64.svg" />
+        <view>{{text1}}</view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="setting_item1">
+  <view class="setting_item">
+    <view class="item_title">{{title}}</view>
+    <view class="radio_group">
+      <view class="radio0" bindtap='{{bind0}}'>
+        <view class="radio_img1" data-current="0">
+          <image wx:if="{{radio}}" src="../../pic/set_circle_64.svg" />
+          <image wx:else src="../../pic/set_radio_16.png" />
+        </view>
+        <view>{{text0}}</view>
+      </view>
+      <view class="radio1" bindtap='{{bind1}}'>
+        <image class="radio_img" wx:if="{{radio}}" src="../../pic/set_radio_16.png" />
+        <image class="radio_img" wx:else src="../../pic/set_circle_64.svg" />
+        <view>{{text1}}</view>
+      </view>
+    </view>
+  </view>
+</template>

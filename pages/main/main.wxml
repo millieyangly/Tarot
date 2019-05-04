@@ -1,0 +1,28 @@
+<!--pages/main/main.wxml-->
+<view class='main'>
+  <view class='up'>
+    <text>新手须知</text>
+    <view class='up_img'>
+      <image bindtap='tap_know' class="eye" src='../../pic/main_beginner.png'></image>
+    </view>
+  </view>
+  <view class='down'>
+    <view class='down_item'>
+      <view class="down_more">
+        <text>更多</text>
+        <image bindtap='tap_more' src='../../pic/main_more.png'></image>
+      </view>
+      <view class="down_eye">
+       
+        <image bindtap='tap_eye'  src='../../pic/index_eye1.png'></image>
+         <text>开始占卜</text>
+      </view>
+      <view class="down_meaning">
+        <text>牌意解析</text>
+        <image bindtap='tap_meaning' src='../../pic/main_explanation.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bg" />
+<view class="bg1" />

@@ -1,0 +1,15 @@
+<!--pages/divine/divine.wxml-->
+
+  <view class="animation-buttons" scroll-y="true"  >
+    <button wx:if="{{step==0}}" class="animation-button" bindtap="washstart">开始洗牌</button>
+    <button wx:if="{{step==1}}" class="animation-button" bindtap="washend">结束洗牌</button>
+    <button wx:if="{{step==2}}" class="animation-button" bindtap="cutstart">切牌</button>
+    <button wx:if="{{step==3}}" class="animation-button" bindtap="drawstart">开始抽牌</button>
+    <button wx:if="{{step==4}}" class="animation-button" bindtap="drawend">确认抽牌</button>
+    <button wx:if="{{step==5}}" class="animation-button" bindtap="endp">结束</button>
+  </view>
+
+
+  <view class="animation-element-wrapper">
+    <image wx:for="{{card}}" wx:key="{{item.id}}" animation='{{item.name}}' class="card-element" src='{{item.bg}}' id='{{item.id}}' bindtap="cardbutton" />
+  </view>

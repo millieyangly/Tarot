@@ -1,0 +1,11 @@
+<!--pages/result/result.wxml-->
+
+  <view class="animation-buttons" scroll-y="true"  >
+    <button  class="animation-button" open-type="share">转发分享</button>
+     <button  class="animation-button" bindtap='toindex'>返回首页</button>
+  </view>
+
+
+  <view class="animation-element-wrapper">
+    <image wx:for="{{card}}" wx:key="{{item.id}}" animation='{{item.name}}' class="card-element" src='{{item.bg}}' id='{{item.id}}' bindtap="cardbutton" />
+  </view>

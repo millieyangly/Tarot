@@ -1,0 +1,41 @@
+<!--pages/process/process.wxml-->
+
+<view wx:for="{{poker}}"> {{item}} </view>
+<!--取牌-->
+<view>
+  <button bindtap='getPoker'>取牌</button>
+</view>
+<!--洗牌-->
+<view>
+  <text>按键时长{{taptime}}毫秒 洗牌次数{{washtime}}</text>
+</view>
+<view>
+  <button bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd" bindlongtap="bingLongTap" bindtap="washPoker">洗牌</button>
+</view>
+<!--切牌-->
+<view style="flex-direction:row;">
+  <input bindinput="cutPokerNum1" value="{{CutPokerNum1}}" type="number" placeholder="1到n,n小于21" />
+  <input bindinput="cutPokerNum2" value="{{CutPokerNum2}}" type="number" placeholder="n到21" />
+</view>
+<view>
+  <button bindtap='cutPoker'>切牌</button>
+</view>
+<!--抽牌-->
+<view style="flex-direction:row;">
+  <input bindinput="drawPokerNum1" value="{{DrawPokerNum1}}" type="number" placeholder="1到22" />
+  <input bindinput="drawPokerNum2" value="{{DrawPokerNum2}}" type="number" placeholder="1到22" />
+  <input bindinput="drawPokerNum3" value="{{DrawPokerNum3}}" type="number" placeholder="1到22" />
+</view>
+<view>
+  <button bindtap='drawPoker'>抽牌</button>
+</view>
+<!--结果-->
+<view>
+  <text>圣三角-过去：{{poker1}}</text>
+</view>
+<view>
+  <text>圣三角-现在：{{poker2}}</text>
+</view>
+<view>
+  <text>圣三角-未来：{{poker3}}</text>
+</view>
